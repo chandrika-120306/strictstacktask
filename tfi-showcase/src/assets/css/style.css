@@ -1,0 +1,16 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #111;
+}
+
+.btn-tfi {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.section-title {
+  font-weight: bold;
+}

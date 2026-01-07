@@ -1,0 +1,31 @@
+{% extends "layouts/base.njk" %}
+{% set title = "TFI Showcase | Contact" %}
+
+{% block content %}
+
+<section class="container my-5">
+  <h2 class="section-title">Contact Us</h2>
+
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Name</label>
+      <input class="form-control" placeholder="Your Name">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Email</label>
+      <input class="form-control" placeholder="Your Email">
+    </div>
+
+    <div class="col-md-12">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" rows="4"></textarea>
+    </div>
+
+    <div class="col-md-12">
+      <button class="btn btn-tfi">Send Message</button>
+    </div>
+  </form>
+</section>
+
+{% endblock %}
