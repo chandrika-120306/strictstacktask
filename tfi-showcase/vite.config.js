@@ -4,14 +4,12 @@ import fs from "fs";
 import path from "path";
 
 export default defineConfig({
-  root: "src",
   build: {
-    outDir: "../dist",
-    emptyOutDir: true,
     rollupOptions: {
-      // ✅ Point to the dummy JS file so Vite has an entry
-      input: path.resolve(__dirname, "src/assets/js/main.js")
-    }
+      input: path.resolve(__dirname, "src/main.js") // dummy entry
+    },
+    outDir: "dist",
+    emptyOutDir: true
   },
   plugins: [
     {
@@ -24,9 +22,7 @@ export default defineConfig({
         const pages = ["index", "about", "gallery", "contact"];
         const outDir = path.resolve("dist");
 
-        if (!fs.existsSync(outDir)) {
-          fs.mkdirSync(outDir, { recursive: true });
-        }
+        if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
         pages.forEach(page => {
           const html = env.render(`pages/${page}.njk`);
